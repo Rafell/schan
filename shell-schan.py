@@ -13,7 +13,6 @@ class ZeroScann():
   
 def __init__(self):
         self.scan() 
-
     def scan(self):
         # argument parser like shit
         parser = argparse.Argument
