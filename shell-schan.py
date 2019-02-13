@@ -2,14 +2,19 @@
 #Code by Mr.F3eLL
 
 from urllib.request import Request,urlopen
-from urllib.error import URLError,HTTPError
+from urllib.error 
+import URLError,HTTPError
 import argparse
 import sys
 import time
+
 global starttime
-class ZeroScann(): 
+
+class ZeroScann():
+ 
 def __init__(self):
-        self.scan() 
+        self.scan()
+ 
     def scan(self):
         # argument parser like shit
         parser = argparse.Argument
@@ -60,8 +65,7 @@ def __init__(self):
                 url = site+psx
                 req = Request(url, headers={"User-Agent": user_agent})
                 time.sleep(0.1)
-                try:
-                    connection = urlopen(req)
+connection = urlopen(req)
                     print("\033[96m[\033[90m{0}\033[96m]".format(time.strftime("%H:%M:%S")),"\033[92mfound:","\033[0m/"+psx)
                     found.append(url)
                     
@@ -74,7 +78,7 @@ def __init__(self):
                 except URLError as e:
                     sys.exit("\033[31m[!] Ups Sorry akses Internet No Conection")
                 except Exception as er :
-                    print("\n\033[93m[?] \033[0mYour Connection Is Bad")
+                  print("\n\033[93m[?] \033[0mYour Connection Is Bad")
                     print("\033[93m[!] \033[0mExit Program")
                     time.sleep(3)
                     exit()
@@ -95,7 +99,7 @@ def __init__(self):
     def banner():
         # just the screen display like this
         info = """\033[33m
-                    ___
+___
                   .'   '.
                  :       :
                  | _   _ |
@@ -129,5 +133,5 @@ def __init__(self):
     print(banner()) 
               
 if __name__ == '__main__':
-    ZeroScann()
+    ZeroScann()
 
