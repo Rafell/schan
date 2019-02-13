@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 # Code by Mr.F3eLL
 
 from urllib.request import Request, urlopen
@@ -11,22 +11,21 @@ import time
 global starttime
 
 class ZeroScann():
-
-    def __init__(self):
-        self.scan()
-      
+  
+def __init__(self):
+        self.scan()  
     def scan(self):
         # argument parser like shit
-        parser = argparse.ArgumentParser(prog="PosiX.py", description="Simple Find Shell in Website")
+        parser = argparse.Argument
+        Parser(prog="Mr.F3eLL.py", description="Simple Find Shell in Website")
         parser.add_argument("-u", dest="domain", help="your url")
         parser.add_argument("-w", dest="wordlist", help="your wordlsit")
         args = parser.parse_args()
         if not args.domain:
             sys.exit("\033[36musage: shell.py -u example.com -w wordlist.txt")
-
         if not args.wordlist:
             sys.exit("\033[36musage: shell.py -u example.com -w wordlist.txt")
-           
+         
         # handle url website format
         site = args.domain
         print("\033[96m[?] \033[0mStart Crawling...")
@@ -73,8 +72,7 @@ class ZeroScann():
                         print("\033[96m[\033[90m{0}\033[96m]".format(time.strftime("%H:%M:%S")),"\033[91merror:","\033[0m/"+psx)
                     else:
                         print("\033[96m[\033[90m{0}\033[96m]".format(time.strftime("%H:%M:%S")),"\033[92minfo :","\033[33m/"+psx,"\033[92mstatus:\033[33m",resp_codes[e.code])
-
-                        
+                        
                 except URLError as e:
                     sys.exit("\033[31m[!] Ups Sorry akses Internet No Conection")
                 except Exception as er:
@@ -98,7 +96,6 @@ class ZeroScann():
                
     def banner():
         # just the screen display like this
-
 # ================================== #
 
 # Shell Scanner #
