@@ -6,11 +6,8 @@ from urllib.error import URLError,HTTPError
 import argparse
 import sys
 import time
-
 global starttime
-
-class ZeroScann():
-  
+class ZeroScann(): 
 def __init__(self):
         self.scan() 
     def scan(self):
@@ -27,8 +24,8 @@ def __init__(self):
         if not args.wordlist:
             sys.exit("\033[36musage: shell-schan.py -u example.com -w wordlist.txt")
          
-        # handle url website format
-        site = args.domain
+    # handle url website format
+    site = args.domain
         print("\033[96m[?] \033[0mStart Crawling...")
         print("\033[96m[!] \033[0mWait a sec!","\n")
         time.sleep(3)
