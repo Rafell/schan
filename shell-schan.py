@@ -1,9 +1,8 @@
-#!/usr/bin/python
-# Code by Mr.F3eLL
+#!/usr/bin/python3
+#Code by Mr.F3eLL
 
-from urllib.request import Request, urlopen
-
-from urllib.error import URLError, HTTPError
+from urllib.request import Request,urlopen
+from urllib.error import URLError,HTTPError
 import argparse
 import sys
 import time
@@ -13,13 +12,16 @@ global starttime
 class ZeroScann():
   
 def __init__(self):
-        self.scan()  
+        self.scan() 
+
     def scan(self):
         # argument parser like shit
         parser = argparse.Argument
         Parser(prog="Mr.F3eLL.py", description="Simple Find Shell in Website")
-        parser.add_argument("-u", dest="domain", help="your url")
-        parser.add_argument("-w", dest="wordlist", help="your wordlsit")
+        parser.add_argument("-u", dest
+                            ="domain", help="your url")
+        parser.add_argument("-w", dest
+                            ="wordlist", help="your wordlsit")
         args = parser.parse_args()
         if not args.domain:
             sys.exit("\033[36musage: shell.py -u example.com -w wordlist.txt")
@@ -66,7 +68,7 @@ def __init__(self):
                     connection = urlopen(req)
                     print("\033[96m[\033[90m{0}\033[96m]".format(time.strftime("%H:%M:%S")),"\033[92mfound:","\033[0m/"+psx)
                     found.append(url)
-                  
+                    
                 except HTTPError as e:
                     if e.code == 404:
                         print("\033[96m[\033[90m{0}\033[96m]".format(time.strftime("%H:%M:%S")),"\033[91merror:","\033[0m/"+psx)
@@ -75,7 +77,7 @@ def __init__(self):
                         
                 except URLError as e:
                     sys.exit("\033[31m[!] Ups Sorry akses Internet No Conection")
-                except Exception as er:
+                except Exception as er :  
                     print("\n\033[93m[?] \033[0mYour Connection Is Bad")
                     print("\033[93m[!] \033[0mExit Program")
                     time.sleep(3)
