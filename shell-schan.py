@@ -24,9 +24,9 @@ def __init__(self):
                             ="wordlist", help="your wordlsit")
         args = parser.parse_args()
         if not args.domain:
-            sys.exit("\033[36musage: shell.py -u example.com -w wordlist.txt")
+            sys.exit("\033[36musage: shell-schan.py -u example.com -w wordlist.txt")
         if not args.wordlist:
-            sys.exit("\033[36musage: shell.py -u example.com -w wordlist.txt")
+            sys.exit("\033[36musage: shell-schan.py -u example.com -w wordlist.txt")
          
         # handle url website format
         site = args.domain
@@ -77,8 +77,8 @@ def __init__(self):
                         
                 except URLError as e:
                     sys.exit("\033[31m[!] Ups Sorry akses Internet No Conection")
-                except Exception as er :  
-                    print("\n\033[93m[?] \033[0mYour Connection Is Bad")
+                except Exception as er :
+                    print("\n\033[93m[?] \033[0mYour Connection Is Bad")
                     print("\033[93m[!] \033[0mExit Program")
                     time.sleep(3)
                     exit()
@@ -98,6 +98,23 @@ def __init__(self):
                
     def banner():
         # just the screen display like this
+        info = """\033[33m
+                    ___
+                  .'   '.
+                 :       :
+                 | _   _ |
+              .-.|(\033[91m0\033[93m)_(\033[91m0\033[93m)|.-.
+             ( ( | .--.  | ) )
+              '-/ (    )  \-'
+               /   '--'    \\
+               \ `\033[91m"===="\033[93m`  /
+                '\       /'
+                 '\     /'
+                 _/'-.-'\_
+            _..:;\._/v\_./:;.._
+          .'/;:;:;\ /^\ /;:;:;\\'.
+         / /;:;:;:;\| |/:;:;:;:\ \\
+        / /;:;:;:;:;\_/:;:;:;:;:\ \\ \033[91m
 # ================================== #
 
 # Shell Scanner #
